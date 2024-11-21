@@ -1,0 +1,62 @@
+{
+  "manifest_version": 3,
+  "name": "RText",
+  "version": "0.1",
+  "permissions": ["storage"],
+  "description": "Revamp Text is an extension that makes reading on the internet a better experience.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.nytimes.com/*"],
+      "js": ["sites/nytime.js"]
+    },
+    {
+      "matches": ["https://*.foxnews.com/*", "https://*.foxbusiness.com/*"],
+      "js": ["sites/foxnews.js"]
+    },
+    {
+      "matches": ["https://*.theguardian.com/*"],
+      "js": ["sites/theguardian.js"]
+    },
+    {
+      "matches": ["https://*.cnn.com/*"],
+      "js": ["sites/cnn.js"]
+    },
+    {
+      "matches": [
+        "https://*.thesun.co.uk/*",
+        "https://*.the-sun.com/*",
+        "https://*.thescottishsun.co.uk/*",
+        "https://*.thesun.ie/*"
+      ],
+      "js": ["sites/thesun.js"]
+    },
+    {
+      "matches": ["https://*.gbtimes.com/*"],
+      "js": ["sites/gbtimes.js"]
+    },
+    {
+      "matches": ["https://*.eff.org/*"],
+      "js": ["sites/eff.js"],
+      "css": ["style.css"]
+    },
+    {
+      "matches": [
+        "https://*.nytimes.com/*",
+        "https://*.foxnews.com/*",
+        "https://*.foxbusiness.com/*",
+        "https://*.theguardian.com/*",
+        "https://*.cnn.com/*",
+        "https://*.thesun.co.uk/*",
+        "https://*.the-sun.com/*",
+        "https://*.thescottishsun.co.uk/*",
+        "https://*.thesun.ie/*",
+        "https://*.gbtimes.com/*",
+        "https://*.eff.org/*"
+      ],
+      "js": ["theme.js"]
+    }
+  ]
+}
