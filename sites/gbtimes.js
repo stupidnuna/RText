@@ -1,4 +1,5 @@
 if (document.querySelector('[itemprop="headline"]')) {
+    loadTheme()
     let headline = document.querySelector('[itemprop="headline"]').innerText
     let article = document.querySelector('[itemprop="text"]').innerText
     let author = document.querySelector('[class="entry-meta"]').innerText.replace("By ", "")
