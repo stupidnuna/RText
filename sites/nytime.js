@@ -1,4 +1,5 @@
 if (document.querySelector('[data-testid="headline"]')) {
+  loadTheme()
   try {
     localStorage.clear();
   } catch (error) {
