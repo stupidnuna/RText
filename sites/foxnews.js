@@ -10,6 +10,7 @@ function filter(text) {
 }
 
 if (document.querySelector(".headline")) {
+  loadTheme()
   const headline = document.querySelector(".headline").innerText
   const summary = document.querySelector(".sub-headline").innerText
   let paragraphs = document.querySelector('[class="article-body"], p[class="speakable"]').innerText
