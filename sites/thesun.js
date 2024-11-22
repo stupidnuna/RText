@@ -1,4 +1,5 @@
 if (document.querySelector(".article__content")) {
+  loadTheme()
   let headline = document.querySelector(".article__headline").innerText
   let summary = document.querySelectorAll(".article__content p")[1].innerText
   let author = document.querySelector(".article__author").innerText.replace("By ", "")
