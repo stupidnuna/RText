@@ -86,9 +86,6 @@
       ],
       "js": [
         "sites/eff.js"
-      ],
-      "css": [
-        "style.css"
       ]
     }
   ]
