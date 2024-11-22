@@ -1,9 +1,9 @@
 function filter(text) {
   const keywords = [
-    "FOX NEWS", "Getty Images", "FOXNEWS.COM", "Foxnews.com", 
+    "FOX NEWS", "Getty Images", "FOXNEWS.COM", "Foxnews.com",
     "Fox News", "CLICK HERE", "Free articles", "View this post", "CLICKING HERE"
   ]
-  
+
   return text.split("\n")
     .filter(line => !keywords.some(keyword => line.includes(keyword)) && line.trim())
     .join("<br><br>")

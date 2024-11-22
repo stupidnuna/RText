@@ -6,16 +6,16 @@ function toTitleCase(str) {
 }
 
 if (document.querySelector('.date')) {
-    loadTheme()
-    document.querySelectorAll('.take-explainer').forEach(element => element.remove());
-    document.querySelectorAll('.take-action').forEach(element => element.remove());
+  loadTheme()
+  document.querySelectorAll('.take-explainer').forEach(element => element.remove());
+  document.querySelectorAll('.take-action').forEach(element => element.remove());
 
-    let headline = document.querySelector('.pane-page-title').innerText;
-    let article = document.querySelector('[role="article"]').innerText;
-    let author = document.querySelector('.byline').innerText.replace("BY ", "");
-    let date = document.querySelector('.date').innerText;
+  let headline = document.querySelector('.pane-page-title').innerText;
+  let article = document.querySelector('[role="article"]').innerText;
+  let author = document.querySelector('.byline').innerText.replace("BY ", "");
+  let date = document.querySelector('.date').innerText;
 
-    document.documentElement.innerHTML = `
+  document.documentElement.innerHTML = `
     <head>
         <title>${headline}</title>
     </head>

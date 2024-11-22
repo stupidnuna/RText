@@ -4,7 +4,6 @@ if (document.querySelector('[data-gu-name="headline"]')) {
   let headline = document.querySelector('[data-gu-name="headline"]').innerText
   let summary = document.querySelector('[data-gu-name="standfirst"]').innerText
   let author = document.querySelector('[rel="author"]').innerText.replace("By ", "")
-
   document.documentElement.innerHTML = `
   <head>
   <title>${headline}</title>
