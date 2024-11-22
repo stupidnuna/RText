@@ -1,6 +1,6 @@
 function loadDefault() {
-  let themeEle = document.createElement("style");
-  themeEle.innerText = `
+    let themeEle = document.createElement("style");
+    themeEle.innerText = `
   body {
       font-family: sans-serif;
       width: 500px;
@@ -11,31 +11,33 @@ function loadDefault() {
   .summary {
       color: #CBB58D;
   }`;
-  document.body.append(themeEle);
+    document.body.append(themeEle);
 }
 
-chrome.storage.sync.get("theme", function(result) {
-  let theme = result.theme;
+function loadTheme() {
+    chrome.storage.sync.get("theme", function (result) {
+        let theme = result.theme;
 
-  if (theme) {
-      fetch(theme)
-          .then(response => {
-              if (!response.ok) {
-                  throw new Error("Network response was not ok");
-              }
-              return response.text();
-          })
-          .then(themeContent => {
-              let themeEle = document.createElement("style");
-              themeEle.innerText = themeContent;
-              document.body.append(themeEle);
-          })
-          .catch(error => {
-              console.error("Failed to fetch theme:", error);
-              loadDefault()
-              alert("Failed to load the theme, resorting to default.");
-          });
-  } else {
-    loadDefault()
-  }
-});
+        if (theme) {
+            fetch(theme)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Network response was not ok");
+                    }
+                    return response.text();
+                })
+                .then(themeContent => {
+                    let themeEle = document.createElement("style");
+                    themeEle.innerText = themeContent;
+                    document.body.append(themeEle);
+                })
+                .catch(error => {
+                    console.error("Failed to fetch theme:", error);
+                    loadDefault()
+                    alert("Failed to load the theme, resorting to default.");
+                });
+        } else {
+            loadDefault()
+        }
+    })
+};
