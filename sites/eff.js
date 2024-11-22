@@ -6,6 +6,7 @@ function toTitleCase(str) {
 }
 
 if (document.querySelector('.date')) {
+    loadTheme()
     document.querySelectorAll('.take-explainer').forEach(element => element.remove());
     document.querySelectorAll('.take-action').forEach(element => element.remove());
 
