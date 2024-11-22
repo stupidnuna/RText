@@ -1,4 +1,5 @@
 if (document.querySelector('[data-gu-name="headline"]')) {
+  loadTheme()
   let article = document.getElementById("maincontent").innerText
   let headline = document.querySelector('[data-gu-name="headline"]').innerText
   let summary = document.querySelector('[data-gu-name="standfirst"]').innerText
